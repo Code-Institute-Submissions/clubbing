@@ -188,7 +188,9 @@ button[type="submit"] {
 
   
   /*--------------------------------------------Map*/
-div#map {
-    min-height: 60px;
-
+#map {
+    height: 100%;
+}
+#map-div, #map-section {
+    height: 500px;
 }

@@ -11,7 +11,8 @@
     <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script type="text/javascript" src="assets/js/github-information.js"></script>
+----------*/
+     <!---script type="text/javascript" src="assets/js/github-information.js"></script>-->
     <title>Stockholm nightlife guide</title>
 </head>
 
@@ -28,7 +29,6 @@
       <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
       <title>Nightlife in Stockholm</title>
    </head>
-   <body>
       <header>
          <h1 class="text-center">Best clubs in Stockholm</h1> 
       </header>
@@ -36,7 +36,7 @@
         <div class="row bg-color-contact">
             <div class="col">
                 <h2 class="text-center">A local guide to Stockholm's best r&b and hip hop clubs</h2>
-                <h3 class="uppercase text-center">Each club is reviewed by a local guide which gives you a full picture about the venue</h3
+                <h3 class="uppercase text-center">Each club is reviewed by a local guide which gives you a full picture about the venue</h3>
             
        
          <h6>Please keep an eye out on this page for listings of our events. These are updated weekly.</h6>
@@ -60,44 +60,23 @@ Since 1997, focus has been set on staging international performances. The theatr
 The venue is located in the meatpacking close to the subway station Globen and Gullmarsplan. Just take back on any of the club regulars and the beating base from the superb VOID Acoustic sound system will get louder as you get closer 😛
 
 Slakthuset also features 600 m2 outdoor rooftop open in the summer, called "TAK" (eg. Rooftop in Swedish).</p>
-             <div id="map"></div> 
+            <section id="map-section">
+            <div class="container" id="map-div">
+                <div id="map" style="height: 100%;"></div>
+            </div>
+        </section>
+
         </div>
             
              </div>
     </section>
   <script>
-     function initMap() {
-    var map = new google.maps.Map(document.getElementById("map"), {
-        zoom: 15,
-        center: {
-            lat: 59.334591,
-            lng: 18.063240
-        }
-    });
-    var labels = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    var locations = [
-        { lat: 59.3358, lng: 18.05076},
-        { lat: 59.3365, lng: 18.0721},
-    ];
-    var markers = locations.map(function(location, i) {
-        return new google.maps.Marker({
-            position: location,
-            labels: labels[i % labels.length]
-        });
-    });
-    var markerCluster = new MarkerClusterer(map, markers, { imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m' });
-}
-
-
-
-    </script>
-    
-    <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
+   
+</script>
+<script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCNaTZqC9S5PvO-FxucWa1y9bzbAQ9awek&callback=initMap"></script>
-<script src="assets/js/maps.js"></script>
-
-</body>
-    <footer class="container">
+<script src="assets/js/map.js"></script>
+<footer class="container">
         <div id="footer-details" class="row">
             <div class="col-sm-4">
                 <h5 class="uppercase general-sub">About</h5>
@@ -158,5 +137,8 @@ Slakthuset also features 600 m2 outdoor rooftop open in the summer, called "TAK"
             </div>
                 </div>
     </footer>
+</body>
+    
+    
 
 </html>
