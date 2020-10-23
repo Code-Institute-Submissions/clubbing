@@ -195,3 +195,16 @@ button[type="submit"] {
 #map-div, #map-section {
     height: 500px;
 }
+/*--------------------------------------------Search Bar*/
+.center-form {
+    padding-top: 100px;
+    margin: 0 auto;
+    max-width: 200%;
+}
+
+button[type="submit"] {
+    margin-top: 15px;
+    margin-bottom: 20px;
+    background-color: #e84610;
+    color: #fafafa;
+}
