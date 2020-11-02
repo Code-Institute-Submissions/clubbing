@@ -196,11 +196,7 @@ button[type="submit"] {
     height: 500px;
 }
 /*--------------------------------------------Search Bar*/
-.center-form {
-    padding-top: 100px;
-    margin: 0 auto;
-    max-width: 200%;
-}
+
 
 button[type="submit"] {
     margin-top: 15px;

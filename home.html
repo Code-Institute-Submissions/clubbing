@@ -45,12 +45,10 @@
                     <h3 class="uppercase text-center">Each club is reviewed by a local guide which gives you a full picture about the venue</h3>
 
                       <div class="center-form">
-                    <input type="text" id="gh-username" value="search venue" oninput="fetchGitHubInformation()" />
-                    <div id="gh-user-data"></div>
-                    <div id="gh-repo-data"></div>
+                
+                    </div>  
 
-                </div>
-
+                    
                     <h6>Please keep an eye out on this page for listings of our events. These are updated weekly.</h6>
                     <div class="container-xl1 uppercase text-left no-gutters">Hilma </div>
                     <p>There was Hilma af Klint, a Swedish artist and mystic, known for her vibrant representations of the Occult. Hilma was pretty badass and pioneered the Abstract art movement with a hauntingly beautiful confidence.
@@ -72,14 +70,63 @@
                         The venue is located in the meatpacking close to the subway station Globen and Gullmarsplan. Just take back on any of the club regulars and the beating base from the superb VOID Acoustic sound system will get louder as you get closer 😛
 
                         Slakthuset also features 600 m2 outdoor rooftop open in the summer, called "TAK" (eg. Rooftop in Swedish).</p>
-
+                        
                 </div>
             </div>
+
+            <div class="center-form">
+                <form onsubmit="return sendMail(this);" class="container" id="contactForm">
+                    <div class="row">
+                    <div class="col-12 col-md-6">
+                        <div class="row">
+                            <div class="col-12 mb-3">
+                                <input type="text" name="name" class="form-control" id="name" placeholder="Name" required>
+                            
+                            
+                            </div>
+                        
+                        </div>
+                            <div class="row">
+                                <div class="col-12 mb-3">
+                                <input type="text" name="name" class="form-control" id="name" placeholder="Email Address" required>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 mb-3">
+                                <input type="text" name="name" class="form-control" id="name" placeholder="Phone number" required>
+                    </div>
+                            <div class="col-12 col-md-6">
+                                <div class="form-group">
+                        <textarea class="form-control" name="text" rows="10" id="enquiry" placeholder="Please type your enquiry here..." required="" style="margin-top: 0px; margin-bottom: 0px; height: 15px;"></textarea>
+                        <div class="text-right">
+                        <button type="submit" class="btn btn-white btn-lg mt-1 mb-2">Send</button>
+                    </div>
+                    </div>
+                    </div>
+                </form>
+
+            </div>
         </section>
+
+        <div class="modal fade" id="successModal" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title success-modal-title">Success!</h4>
+                </div>
+                <div class="modal-body">
+                    <p class="success-text">Thank you. Your message has been sent to the team.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-orange" data-dismiss="modal" onclick="removeText()">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
         <section id="map-section">
             <div class="container" id="map-div">
                 <div id="map" style="height: 100%;"></div>
             </div>
+
         </section>
         <footer class="container">
             <div id="footer-details" class="row">
