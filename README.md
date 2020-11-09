@@ -1,41 +1,30 @@
-<img src="https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png" style="margin: 0;">
+CLUBBING
 
-Welcome aoshenye,
+This website was designed for a customers who are looking for a club to go to in Stockholm. The site allows accescibility to the locations and updated general information of each club within one website. It allows an individual to compare locations all in one page rather than openinng several pages just to check what was happening in each club that night. It also consisted of direct communication by mentions from local guides which allows contacting the site in order to make more updates or listen to any requests from several stakeholders. It was therefore significant that we displayed ways to contact and social 
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. You can safely delete this README.md file, or change it for your own project.
+#UX I desgined this project as a one page based site. This would allow for easy navigation due to its simplicity and mobile friendly considering users of the site would most likely be people on the move looking for the next club to go to. As such, it was imperative that I created a site that was mobile-friendly, as a priority. 
 
-## Gitpod Reminders
+Target Audience:
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+ The website is aimed but not limited to:
+	- clubbers
+	- club owners
+	- tourists
+  
+  
+  #FEATURES:
+  
+  - Map: The map allows users to be able to make comparisons to do with distances and locations between clubs and identify general information about each one. 
+  - Contact form: The form allows users to be able to contact the site owners directly with a message that relates to updates on the clubs and contact that communicates between users and tour guides. For example, asking questions on local guide suggestions. 
+  
+  - HTML: Provided the content and structure for the website.
+  - Bootstrap: The framework was used to create the layout for the page. 
+  - CSS: Provides the styling.
+  - Coolors: used to create the page colour scheme. 
+  
+  #TESTING:
 
-`python3 -m http.server`
+Testing was carried out using the developer tools in Google Chrome and also while in preview from Gitpod. I used Google chrom developer mode to check responsovness and the extent to which users could view the page via mobile. Back-and-forth alterations of code occured in order to achieve appropriate responsivness of the forms and the map locations. 
 
-A blue button should appear to click: *Make Public*,
-
-Another blue button should appear to click: *Open Browser*.
-
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
-
-A blue button should appear to click: *Make Public*,
-
-Another blue button should appear to click: *Open Browser*.
-
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the backend lessons.
-
-## Updates Since The Instructional Video
-
-We continually tweak and adjust this template to help give you the best experience. Here are the updates since the original video was made:
-
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed along with other common files.
-
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
-
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
-
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
-
---------
-
-Happy coding!
+#Page purpose:
+ - to present 
