@@ -141,15 +141,20 @@ footer .cv-pdf i:hover {
 }
 
 /*--------------------------------------------Cards*/
-.col-lg-3 col-md-6 mb-4{
-  padding-top: 56px;
-  font-size: 50px;
+.card {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: normal;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .1rem;
 }
 
-.card-img-top{
-    border-top-left-radius: calc(.25rem - 1px);
-    border-top-right-radius: calc(.25rem - 1px);
-}
 
 /*--------------------------------------------Media Queries*/
 
