@@ -44,6 +44,38 @@
             <div class=" mx-auto col-12 col-sm-8 mb-3">
                 <form class="search-form">
                     <input class="search-bar form-control-lg pac-target-input" id="autocomplete" placeholder="Enter a club..." type="text" autocomplete="off">
+               
+               <ul id="myUL">
+  <li><a href="#">Hilma</a></li>
+  <li><a href="#">Spy Bar</a></li>
+
+  <li><a href="#">Sodra Teatern</a></li>
+  <li><a href="#">Slakthuset</a></li>
+</ul>
+
+<script>
+function myFunction() {
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myUL");
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
+</script>
+
+
+               
+               
+               
                 </form>
             </div>
         </div>

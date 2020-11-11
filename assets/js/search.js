@@ -5,12 +5,12 @@ var autocomplete;
 function startAuto(){
     autocomplete = new google.maps.places.Autocomplete(
         (document.getElementById('autocomplete')), {
-        types: ['(cities)']}
+        types: ['(clubs)']}
     );
     autocomplete.addListener('place_changed', placeSearch);
 }
 
-// Google Maps API - Open modal and returns a city and map based on users search. 
+// Google Maps API - Open modal and returns a club and map based on users search. 
 function placeSearch(){
     var place = autocomplete.getPlace();
     var lat = place.geometry.location.lat();
@@ -23,17 +23,17 @@ function placeSearch(){
     autoMap(lat,lng);
 }
 
-// Google Maps API - Opens a map on the modal based on the city selected and returns tourist attractions
+// Google Maps API - Opens a map on the modal based on the club selected and returns tourist attractions
 function autoMap(lat,lng) {
-    var city = new google.maps.LatLng(lat,lng);
+    var club = new google.maps.LatLng(lat,lng);
     map = new google.maps.Map(document.getElementById('mapAuto'), {
-        center: city,
+        center: club,
         zoom: 16
     });
 
-    var hotels = {location: city,radius: '500',type: ['lodging']};
-    var attractions = {location: city,radius: '500',type: ['museum']};
-    var interests = {location: city,radius: '500',type: ['point_of_interest']};
+    var hotels = {location: club,radius: '500',type: ['lodging']};
+    var attractions = {location: club,radius: '500',type: ['museum']};
+    var interests = {location: club,radius: '500',type: ['point_of_interest']};
  
     var service = new google.maps.places.PlacesService(map);
     service.nearbySearch(interests, callback);
@@ -44,39 +44,19 @@ function autoMap(lat,lng) {
 // Assign custom icon to markers on the map
 function getIcon(type){
     switch (type){
-        case "lodging":
-        return urlIcon = "https://www.flaticon.com/svg/static/icons/svg/897/897061.svg";
         
-
-        case "restaurant":
-        return urlIcon = "https://www.flaticon.com/svg/static/icons/svg/3556/3556680.svg"; 
-        
-
         case "bar":
         return urlIcon = "https://www.flaticon.com/svg/static/icons/svg/761/761767.svg"; 
-        
-
-        case "spa":
-        return urlIcon = "https://www.flaticon.com/svg/static/icons/svg/2751/2751542.svg"; 
-        
-
+    
         case "night_club":
         return urlIcon = "https://www.flaticon.com/svg/static/icons/svg/3093/3093998.svg"; 
         
-        case "shopping_mall":
-        return urlIcon = "https://www.flaticon.com/svg/static/icons/svg/831/831209.svg";
-        
-
-        case "point_of_interest":
-        return urlIcon = "https://www.flaticon.com/svg/static/icons/svg/883/883746.svg";
-        
-
         default:
         return urlIcon = "https://www.flaticon.com/svg/static/icons/svg/944/944551.svg";
     }
 }
 
-// Google Maps API - Callback function that drops markers on the map which are tourist attractions in the city
+// Google Maps API - Callback function that drops markers on the map which are tourist attractions in the club
 function callback(results, status) {
     if (status == google.maps.places.PlacesServiceStatus.OK) {
         for (var i = 0; i < results.length; i++) {
@@ -275,7 +255,7 @@ function removeText(){
 $(".guide-html").click(function(){
    $('#quick-guide').append(` <div class="row mt-4 container">
     <div class="col-12 col-lg-8 mb-4">
-        <img id="modal-image" src="..." alt="image of city center" class="img-fluid">
+        <img id="modal-image" src="..." alt="image of club center" class="img-fluid">
     </div>
     <div class="col-12 col-lg-4">
         <h5 class="modal-guide">Quick Guide</h5>
@@ -324,7 +304,7 @@ $(".feature-venice").click(function(){
     $('#currency-item').text(" Euros");
     $('#temp-item').text(" 22");
     $('#airport-item').text(" Treviso Airport (TSF)");
-    $('#guide-item').text("The image of a dazzling city built on water has captured the imagination of writers, travellers, and city planners the world over. St Petersburg in Russia was modelled on it, Venezuela was named after it. Venice has a special place in the world’s collective heart and imagination.");
+    $('#guide-item').text("The image of a dazzling club built on water has captured the imagination of writers, travellers, and club planners the world over. St Petersburg in Russia was modelled on it, Venezuela was named after it. Venice has a special place in the world’s collective heart and imagination.");
     $('#modal-image').attr("src","https://images.unsplash.com/photo-1520175480921-4edfa2983e0f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1494&q=80");
     $('.card-img-top0').attr("src","https://images.unsplash.com/photo-1572166292333-4dd297b6409d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80");
     $('.card-img-top1').attr("src","https://images.unsplash.com/photo-1594560913036-d15f23f8a91c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1498&q=80");
@@ -350,7 +330,7 @@ $(".feature-sydney").click(function(){
   $('#currency-item').text("Australian Dollar");
   $('#temp-item').text(" 22");
   $('#airport-item').text("Sydney Airport (SYD)");
-  $('#guide-item').text("Sydney is a very livable city with magnificent nature and vibrant cultural life. It is home to the largest fish market in the world and is also considered to be the most densely populated city in the entire continent.");
+  $('#guide-item').text("Sydney is a very livable club with magnificent nature and vibrant cultural life. It is home to the largest fish market in the world and is also considered to be the most densely populated club in the entire continent.");
   $('#modal-image').attr("src","https://images.unsplash.com/photo-1528800223624-764941bb49db?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1466&q=80");
   $('.card-img-top0').attr("src","https://images.unsplash.com/photo-1570213489059-0aac6626cade?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80");
   $('.card-img-top1').attr("src","https://images.unsplash.com/photo-1560662105-57f8ad6ae2d1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80");
@@ -362,7 +342,7 @@ $(".feature-sydney").click(function(){
   $('.hotelAddress1').text("176 Cumberland St, The Rocks");
   $('.hotelAddress2').text("114 Darlinghurst Rd, Darlinghurst");
   $('.hotelWebsite0').attr("href","https://www.meritonsuites.com.au/");
-  $('.hotelWebsite1').attr("href","https://www.shangri-la.com/en/sydney/shangrila/reservations/select-room-rate/?hotel=Shangri-La%20Hotel%2C%20Sydney&hotelCode=SLSN&timeZone=%2B10&city=Sydney&checkInDate=2020-09-26&checkOutDate=2020-09-27&rooms=%5B%7B%22adultNum%22%3A1%2C%22childNum%22%3A0%7D%5D&confirmationNo=&specialCode=&specialCodeType=&country=&specialCodeToken=");
+  $('.hotelWebsite1').attr("href","https://www.shangri-la.com/en/sydney/shangrila/reservations/select-room-rate/?hotel=Shangri-La%20Hotel%2C%20Sydney&hotelCode=SLSN&timeZone=%2B10&club=Sydney&checkInDate=2020-09-26&checkOutDate=2020-09-27&rooms=%5B%7B%22adultNum%22%3A1%2C%22childNum%22%3A0%7D%5D&confirmationNo=&specialCode=&specialCodeType=&country=&specialCodeToken=");
   $('.hotelWebsite2').attr("href","https://hotels.cloudbeds.com/reservation/CCGWUs#checkin=2020-09-25&checkout=2020-09-26");
 });
 
@@ -376,7 +356,7 @@ $(".feature-toronto").click(function(){
   $('#currency-item').text(" Canadian Dollar");
   $('#temp-item').text(" 30");
   $('#airport-item').text(" Saint Catherines Airport (YCM)");
-  $('#guide-item').text("If you’re planning a visit to Canada you’ll more likely than not be visiting Toronto. Because that’s the city from which you visit Niagra Falls, right? Well, yes, that is correct, but there is so much more to Toronto that its proximity to the spectacular waterfalls.");
+  $('#guide-item').text("If you’re planning a visit to Canada you’ll more likely than not be visiting Toronto. Because that’s the club from which you visit Niagra Falls, right? Well, yes, that is correct, but there is so much more to Toronto that its proximity to the spectacular waterfalls.");
   $('#modal-image').attr("src","https://images.unsplash.com/photo-1477173860144-6f21cf27086a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80");
   $('.card-img-top0').attr("src","https://images.unsplash.com/photo-1571275293295-7a6d0d4dadd6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1502&q=80");
   $('.card-img-top1').attr("src","https://images.unsplash.com/photo-1522010848282-9923b63eebaa?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1370&q=80");
@@ -402,7 +382,7 @@ $(".feature-cape").click(function(){
   $('#currency-item').text(" South African Rand");
   $('#temp-item').text(" 32");
   $('#airport-item').text(" Cape Town International Airport (CPT)");
-  $('#guide-item').text("Awarded by New York Times as the best place in the world to visit in 2014, Cape Town is a beautiful port city located on the Southwest coast of Africa.  Famous for the Table Mountain, where at least two couples get hitched every month, and for the Castle of Good Hope that is the oldest colonial building in this part of Africa.");
+  $('#guide-item').text("Awarded by New York Times as the best place in the world to visit in 2014, Cape Town is a beautiful port club located on the Southwest coast of Africa.  Famous for the Table Mountain, where at least two couples get hitched every month, and for the Castle of Good Hope that is the oldest colonial building in this part of Africa.");
   $('#modal-image').attr("src","https://images.unsplash.com/photo-1530187589563-1ff5b061d4f9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1469&q=80");
   $('.card-img-top0').attr("src","https://images.unsplash.com/photo-1445019980597-93fa8acb246c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1506&q=80");
   $('.card-img-top1').attr("src","https://images.unsplash.com/photo-1570057633591-255115b592fb?ixlib=rb-1.2.1&auto=format&fit=crop&w=1436&q=80");
@@ -428,7 +408,7 @@ $(".feature-zurich").click(function(){
   $('#currency-item').text(" Swiss Franc");
   $('#temp-item').text(" 19");
   $('#airport-item').text(" Zurich Airport (ZRH)");
-  $('#guide-item').text("Home to many world’s major banks, lakes, mountains and parks, Zurich is a top tourist spot for many visitors. This charming city is also known as a global centre for banking and, therefore, attracts a lot of business clientele. Zurich has over 100 company hotels that are perfect for overnight stays. However, it is an expensive city, but the experience is more than worth it.");
+  $('#guide-item').text("Home to many world’s major banks, lakes, mountains and parks, Zurich is a top tourist spot for many visitors. This charming club is also known as a global centre for banking and, therefore, attracts a lot of business clientele. Zurich has over 100 company hotels that are perfect for overnight stays. However, it is an expensive club, but the experience is more than worth it.");
   $('#modal-image').attr("src","https://images.unsplash.com/photo-1544030134-c0883e9e4046?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1567&q=80");
   $('.card-img-top0').attr("src","https://images.unsplash.com/photo-1544030134-c0883e9e4046?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1567&q=80");
   $('.card-img-top1').attr("src","https://images.unsplash.com/photo-1489171078254-c3365d6e359f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1489&q=80");
@@ -454,7 +434,7 @@ $(".feature-marrakech").click(function(){
   $('#currency-item').text(" Moroccan Dirham");
   $('#temp-item').text(" 27");
   $('#airport-item').text(" Marrakech Menara Airport (RAK)");
-  $('#guide-item').text("The bustling Moroccan city of Marrakech will have you smiling ’til it hurts, licking your lips at the mouth watering food, scratching your head at the confusion, and shaking your head at how the madness just seems to work.");
+  $('#guide-item').text("The bustling Moroccan club of Marrakech will have you smiling ’til it hurts, licking your lips at the mouth watering food, scratching your head at the confusion, and shaking your head at how the madness just seems to work.");
   $('#modal-image').attr("src","https://images.unsplash.com/photo-1580816256869-3e870e8b948f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1567&q=80");
   $('.card-img-top0').attr("src","https://images.unsplash.com/photo-1578338131652-dcca32ab1d36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80");
   $('.card-img-top1').attr("src","https://images.unsplash.com/photo-1541480551145-2370a440d585?ixlib=rb-1.2.1&auto=format&fit=crop&w=1498&q=80");
