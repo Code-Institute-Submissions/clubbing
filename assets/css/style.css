@@ -187,10 +187,23 @@ footer .cv-pdf i:hover {
 }
 /*--------------------------------------------Search Bar*/
 
+.search-container{
+    background-color: #3D3D3D;
+    height: max-content;
+    padding-bottom: 3rem;
+}
 
-button[type="submit"] {
-    margin-top: 15px;
-    margin-bottom: 20px;
-    background-color: #e84610;
-    color: #fafafa;
+.search-bar{
+    width: 100%;
+    border: 2px solid #3D3D3D;
+}
+
+input::placeholder {
+  color: #3D3D3D;
+  font-family: "Open Sans", sans-serif;
+}
+
+#rating {
+    font-size: 13px;
+    font-family: "Open Sans", sans-serif;
 }
