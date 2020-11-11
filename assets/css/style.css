@@ -1,19 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,600,700|Exo:100,200,300,400,500,600,700');
 
-.container-xl1{
-    font-size: 350%;
-}
-
-.container-xl2 {
-    font-size: 350%;
-}
-
-.container-xl3 {
-    font-size: 350%;
-}
-
-.container-xl4 {
-    font-size: 350%;
+.club description{
+    font-size: 350px;
+    font-style: italic;
 }
 
 /*--------------------------------------------Colors*/
@@ -27,7 +16,7 @@
 }
 /*---------------Body background color*/
 .bg-color-contact {
-    background-color: #f2d492;
+    background-color: #f8f9f8ff;
 }
 
 
@@ -124,13 +113,14 @@ footer .cv-pdf i:hover {
 }
 
 .social-links li a i {
-    width: 32px;
-    height: 32px;
+    width: 4rem;
+    height: 4rem;
     padding: 12px 0;
     border-radius: 50%;
-    font-size: 13px;
-    line-height: 7px;
+    font-size: 1.5rem;
+    line-height: 4.3rem;
     text-align: center;
+    display: block;
     color: #fafafa;
     background: #8f8f8f;
     transition: all 0.35s ease-in-out;
@@ -142,29 +132,24 @@ footer .cv-pdf i:hover {
 .social-links li a i:hover {
     background: #e84610;
 }
+.text-center {
+    text-align: center!important;
+}
 
 #footer-details {
     margin: 20px;
 }
 
-/*--------------------------------------------Contact*/
-
-
-
-
-.center-form {
-    padding-top: 10px;
-    margin: 0 auto;
-    max-width: 70%;
+/*--------------------------------------------Cards*/
+.col-lg-3 col-md-6 mb-4{
+  padding-top: 56px;
+  font-size: 50px;
 }
 
-button[type="submit"] {
-    margin-top: 15px;
-    margin-bottom: 20px;
-    background-color: #e84610;
-    color: #fafafa;
+.card-img-top{
+    border-top-left-radius: calc(.25rem - 1px);
+    border-top-right-radius: calc(.25rem - 1px);
 }
-
 
 /*--------------------------------------------Media Queries*/
 
