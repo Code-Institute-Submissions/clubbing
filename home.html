@@ -1,214 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" type="text/css" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css" type="text/css" />
-    <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script type="text/javascript" src="assets/js/github-information.js"></script>
-    <title>Stockholm nightlife guide</title>
-</head>
-
-<body>
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" type="text/css">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css" type="text/css" />
-        <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
-        <title>Nightlife in Stockholm</title>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCNaTZqC9S5PvO-FxucWa1y9bzbAQ9awek"></script>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script type="text/javascript" src="assets/js/github-information.js"></script>
-
-    </head>
-
-    <body>
-        <header>
-            <h1 class="text-center">Best clubs in Stockholm</h1>
-        </header>
-        <section class="container-fluid">
-
-<div class="row">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" type="text/css">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css" type="text/css" />
+      <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
+      <title>Nightlife in Stockholm</title>
+      <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA727QkFrjWhzr_hxqcxtuRE3XR0lLMWDQ"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <script type="text/javascript" src="assets/js/searchbox.js"></script>
+   </head>
+   <body>
+      <header>
+         <h1 class="text-center">Best clubs in Stockholm</h1>
+      </header>
+      <section class="container-fluid">
+         <div class="row">
             <div class=" mx-auto col-12 col-sm-8 mb-3">
-                <form class="search-form">
-                    <input class="search-bar form-control-lg pac-target-input" id="autocomplete" placeholder="Enter a club..." type="text" autocomplete="off">
-               
-               <ul id="myUL">
-  <li><a href="#">Hilma</a></li>
-  <li><a href="#">Spy Bar</a></li>
-
-  <li><a href="#">Sodra Teatern</a></li>
-  <li><a href="#">Slakthuset</a></li>
-</ul>
-
-<script>
-function myFunction() {
-    var input, filter, ul, li, a, i, txtValue;
-    input = document.getElementById("myInput");
-    filter = input.value.toUpperCase();
-    ul = document.getElementById("myUL");
-    li = ul.getElementsByTagName("li");
-    for (i = 0; i < li.length; i++) {
-        a = li[i].getElementsByTagName("a")[0];
-        txtValue = a.textContent || a.innerText;
-        if (txtValue.toUpperCase().indexOf(filter) > -1) {
-            li[i].style.display = "";
-        } else {
-            li[i].style.display = "none";
-        }
-    }
-}
-</script>
-
-
-               
-               
-               
-                </form>
+               <form class="search-form">
+                  <input class="search-bar form-control-lg pac-target-input" id="autocomplete" placeholder="Enter a club..." type="text" autocomplete="off">
+                  <ul id="myUL">
+                     <li><a href="#">Hilma</a></li>
+                     <li><a href="#">Spy Bar</a></li>
+                     <li><a href="#">Sodra Teatern</a></li>
+                     <li><a href="#">Slakthuset</a></li>
+                  </ul>
+                  <script>
+                     function myFunction() {
+                         var input, filter, ul, li, a, i, txtValue;
+                         input = document.getElementById("myInput");
+                         filter = input.value.toUpperCase();
+                         ul = document.getElementById("myUL");
+                         li = ul.getElementsByTagName("li");
+                         for (i = 0; i < li.length; i++) {
+                             a = li[i].getElementsByTagName("a")[0];
+                             txtValue = a.textContent || a.innerText;
+                             if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                                 li[i].style.display = "";
+                             } else {
+                                 li[i].style.display = "none";
+                             }
+                         }
+                     }
+                  </script>
+               </form>
             </div>
-        </div>
-
-            <div class="row bg-color-contact">
-                <div class="col">
-                    <h2 class="text-center">A local guide to Stockholm's best r&b and hip hop clubs</h2>
-                    
-                      <div class="clubs">
-                        <div class="club listing"<div class="listing venue" src="https://fastly.4sqi.net/img/general/1398x536/66U5SJQ30DSL0Z95CvUsA9_9m-C1DKBTz6-7ojheVOY.jpg">
-                        
+         </div>
+         <div class="row bg-color-contact">
+         <div class="col">
+            <h2 class="text-center">A local guide to Stockholm's best r&b and hip hop clubs</h2>
+            <div class="clubs">
+               <div class="club listing"
+               <div class="listing venue" src="https://fastly.4sqi.net/img/general/1398x536/66U5SJQ30DSL0Z95CvUsA9_9m-C1DKBTz6-7ojheVOY.jpg">
+               </div>
+            </div>
+            <div class="container">
+               <!-- Page Features -->
+               <div class="row text-center">
+                  <div class="col-lg-3 col-md-6 mb-4">
+                     <div class="card h-100 Hilma">
+                        <img class="card-img-top" src="assets/images/hilma.jpg"" alt="">
+                        <div class="card-body">
+                           <h4 class="card-title">Hilma</h4>
+                           <p class="card-text">There was Hilma af Klint, a Swedish artist and mystic, known for her vibrant representations of the Occult. Hilma was pretty badass and pioneered the Abstract art movement with a hauntingly beautiful confidence.
+                              Inspired by her mysterious and alluring Spirit, we have created a space to host those with open minds and a taste for adventure. The kind of place where the food and drink tickle your senses and the Art follows you home. The kind of night where you can free your mind on the dance floor and let your senses guide you.
+                              Take a swing in Hilma’s artfully seductive surroundings, dance the night away with a drink in your hand or get inked for ever and always - the choice is yours.
+                           </p>
                         </div>
-                      
-                      
-                      </div>
-
-    <div class="container">     
-  <!-- Page Features -->
-     <div class="row text-center">
-
-      <div class="col-lg-3 col-md-6 mb-4">
-        <div class="card h-100 Hilma">
-          <img class="card-img-top" src="assets/images/hilma.jpg"" alt="">
-          <div class="card-body">
-            <h4 class="card-title">Hilma</h4>
-            <p class="card-text">There was Hilma af Klint, a Swedish artist and mystic, known for her vibrant representations of the Occult. Hilma was pretty badass and pioneered the Abstract art movement with a hauntingly beautiful confidence.
-
-                        Inspired by her mysterious and alluring Spirit, we have created a space to host those with open minds and a taste for adventure. The kind of place where the food and drink tickle your senses and the Art follows you home. The kind of night where you can free your mind on the dance floor and let your senses guide you.
-
-                        Take a swing in Hilma’s artfully seductive surroundings, dance the night away with a drink in your hand or get inked for ever and always - the choice is yours.</p>
-          </div>
-          <div class="card-footer">
-            <a href="https://www.hilmastockholm.com/" class="btn btn-primary">Find Out More!</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-3 col-md-6 mb-4">
-        <div class="card h-100 Spy Bar">
-          <img class="card-img-top" src="assets/images/spy.jpeg"" alt="">
-          <div class="card-body">
-            <h4 class="card-title">Spy Bar</h4>
-            <p class="card-text">Sweden’s leading entertainment group, Stureplansgruppen operates bars and nightclubs in Stockholm, Visby and Gothenburg. We are totally committed to deliver first-class entertainment experiences. Visit a nightclub or bar and you’ll enjoy a unique experience with regard to atmosphere, music, food, beverage and ambience. All in a safe and secure environment.</p>
-          </div>
-          <div class="card-footer">
-            <a href="https://www.stureplansgruppen.se/nattliv/spy-bar/" class="btn btn-primary">Find Out More!</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-3 col-md-6 mb-4">
-        <div class="card h-100 Sodra Teatern">
-          <img class="card-img-top" src="assets/images/sodra.jpg" alt="">
-          <div class="card-body">
-            <h4 class="card-title">Sodra Teatern</h4>
-            <p class="card-text">Södra Teatern is one of Sweden's oldest active theaters. The current theater was designed by architect Johan Fredrik Åbom (1817-1900) and was inaugurated in 1859. It has two restaurants, outdoor terraces and seven stages. The building also consists of five bars and the Mosebacke Etablissement restaurant. Stora Scen is the main stage. Mosebacketerrassen is an outdoor terrace. Champagnebaren is a newly renovated banquet hall [2][3]
-
-                        Since 1997, focus has been set on staging international performances. The theatre houses diverse events, spanning from club-scene entertainment, concerts, theatre and readings to children's philosophy. Although built as a theatre, the main focus today is on music. Over 600 events were staged in 2010, 2011 was expected to see around 1000 events.</p>
-          </div>
-          <div class="card-footer">
-            <a href="https://sodrateatern.com/" class="btn btn-primary">Find Out More!</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-3 col-md-6 mb-4">
-        <div class="card h-100 Slakthuset">
-          <img class="card-img-top" src="assets/images/slak.jpg" alt="">
-          <div class="card-body">
-            <h4 class="card-title">Slakthuset</h4>
-            <p class="card-text">For several years now, the club venue "Slakthuset" has been hosten in an old slaughterhouse just south of central Stockholm. Here you will fill find Stockholms finest dancing and clubbing to internationally established SuperDJs, and up-and-coming local acts.
-
-                        The venue is located in the meatpacking close to the subway station Globen and Gullmarsplan. Just take back on any of the club regulars and the beating base from the superb VOID Acoustic sound system will get louder as you get closer 😛
-
-                        Slakthuset also features 600 m2 outdoor rooftop open in the summer, called "TAK" (eg. Rooftop in Swedish).</p>
-          </div>
-          <div class="card-footer">
-            <a href="https://slakthuset.nu/" class="btn btn-primary">Find Out More!</a>
-          </div>
-        </div>
-      </div>
-
-    </div>
-   
-
-  </div>
-                </div>
-
-        
-        </section>
-
-
-        <section id="map-section">
-            <div class="container" id="map-div">
-                <div id="map" style="height: 100%;"></div>
+                        <div class="card-footer">
+                           <a href="https://www.hilmastockholm.com/" class="btn btn-primary">Find Out More!</a>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-lg-3 col-md-6 mb-4">
+                     <div class="card h-100 Spy Bar">
+                        <img class="card-img-top" src="assets/images/spy.jpeg"" alt="">
+                        <div class="card-body">
+                           <h4 class="card-title">Spy Bar</h4>
+                           <p class="card-text">Sweden’s leading entertainment group, Stureplansgruppen operates bars and nightclubs in Stockholm, Visby and Gothenburg. We are totally committed to deliver first-class entertainment experiences. Visit a nightclub or bar and you’ll enjoy a unique experience with regard to atmosphere, music, food, beverage and ambience. All in a safe and secure environment.</p>
+                        </div>
+                        <div class="card-footer">
+                           <a href="https://www.stureplansgruppen.se/nattliv/spy-bar/" class="btn btn-primary">Find Out More!</a>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-lg-3 col-md-6 mb-4">
+                     <div class="card h-100 Sodra Teatern">
+                        <img class="card-img-top" src="assets/images/sodra.jpg" alt="">
+                        <div class="card-body">
+                           <h4 class="card-title">Sodra Teatern</h4>
+                           <p class="card-text">Södra Teatern is one of Sweden's oldest active theaters. The current theater was designed by architect Johan Fredrik Åbom (1817-1900) and was inaugurated in 1859. It has two restaurants, outdoor terraces and seven stages. The building also consists of five bars and the Mosebacke Etablissement restaurant. Stora Scen is the main stage. Mosebacketerrassen is an outdoor terrace. Champagnebaren is a newly renovated banquet hall [2][3]
+                              Since 1997, focus has been set on staging international performances. The theatre houses diverse events, spanning from club-scene entertainment, concerts, theatre and readings to children's philosophy. Although built as a theatre, the main focus today is on music. Over 600 events were staged in 2010, 2011 was expected to see around 1000 events.
+                           </p>
+                        </div>
+                        <div class="card-footer">
+                           <a href="https://sodrateatern.com/" class="btn btn-primary">Find Out More!</a>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-lg-3 col-md-6 mb-4">
+                     <div class="card h-100 Slakthuset">
+                        <img class="card-img-top" src="assets/images/slak.jpg" alt="">
+                        <div class="card-body">
+                           <h4 class="card-title">Slakthuset</h4>
+                           <p class="card-text">For several years now, the club venue "Slakthuset" has been hosten in an old slaughterhouse just south of central Stockholm. Here you will fill find Stockholms finest dancing and clubbing to internationally established SuperDJs, and up-and-coming local acts.
+                              The venue is located in the meatpacking close to the subway station Globen and Gullmarsplan. Just take back on any of the club regulars and the beating base from the superb VOID Acoustic sound system will get louder as you get closer 😛
+                              Slakthuset also features 600 m2 outdoor rooftop open in the summer, called "TAK" (eg. Rooftop in Swedish).
+                           </p>
+                        </div>
+                        <div class="card-footer">
+                           <a href="https://slakthuset.nu/" class="btn btn-primary">Find Out More!</a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
             </div>
-
-        </section>
-        <footer class="container text-center">
-            <div id="footer-details" class="row">
-                <div class="container">
-                 <!-- Socials -->
-                    <h5 class="uppercase general-sub"></h5>
-                    <ul class="list-inline social-links">
-                        <li class="list-inline-item">
-                            <a target="_blank" href="https://www.facebook.com/">
-                                <i class="fa fa-facebook" aria-hidden="true"></i>
-                                <span class="sr-only">Facebook</span>
-                            </a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a target="_blank" href="https://twitter.com/?lang=en-gb">
-                                <i class="fa fa-twitter" aria-hidden="true"></i>
-                                <span class="sr-only">Twitter</span>
-                            </a>
-                        </li>
-                        
-                        <li class="list-inline-item">
-                            <a target="_blank" href="https://www.pinterest.co.uk/pinterest/_created/">
-                                <i class="fa fa-pinterest" aria-hidden="true"></i>
-                                <span class="sr-only">Pinterest</span>
-                            </a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a target="_blank" href="https://www.instagram.com/">
-                                <i class="fa fa-instagram" aria-hidden="true"></i>
-                                <span class="sr-only">Instagram</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
+         </div>
+      </section>
+      <section id="map-section">
+         <div class="container" id="map-div">
+            <div id="map" style="height: 100%;"></div>
+         </div>
+      </section>
+      <footer class="container text-center">
+         <div id="footer-details" class="row">
+            <div class="container">
+               <!-- Socials -->
+               <h5 class="uppercase general-sub"></h5>
+               <ul class="list-inline social-links">
+                  <li class="list-inline-item">
+                     <a target="_blank" href="https://www.facebook.com/">
+                     <i class="fa fa-facebook" aria-hidden="true"></i>
+                     <span class="sr-only">Facebook</span>
+                     </a>
+                  </li>
+                  <li class="list-inline-item">
+                     <a target="_blank" href="https://twitter.com/?lang=en-gb">
+                     <i class="fa fa-twitter" aria-hidden="true"></i>
+                     <span class="sr-only">Twitter</span>
+                     </a>
+                  </li>
+                  <li class="list-inline-item">
+                     <a target="_blank" href="https://www.pinterest.co.uk/pinterest/_created/">
+                     <i class="fa fa-pinterest" aria-hidden="true"></i>
+                     <span class="sr-only">Pinterest</span>
+                     </a>
+                  </li>
+                  <li class="list-inline-item">
+                     <a target="_blank" href="https://www.instagram.com/">
+                     <i class="fa fa-instagram" aria-hidden="true"></i>
+                     <span class="sr-only">Instagram</span>
+                     </a>
+                  </li>
+               </ul>
             </div>
-        </footer>
-        <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
-        <script src="assets/js/map.js"></script>
-    </body></html>
+         </div>
+      </footer>
+      <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
+      <script src="assets/js/map.js"></script>
+   </body>
+</html>
