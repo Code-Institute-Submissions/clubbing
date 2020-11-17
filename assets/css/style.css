@@ -1,10 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,600,700|Exo:100,200,300,400,500,600,700');
 
-.club description{
-    font-size: 350px;
-    font-style: italic;
-}
-
 /*--------------------------------------------Colors*/
 
 .bg-color-name-title {
@@ -30,42 +25,11 @@ body {
 
 /*--------------------------------------------Special Paddings/Margins/Text*/
 
-h1,
-h2,
-h3,
-h4 {
-    margin: 100px;
-}
-
-.uppercase {
-    text-transform: uppercase;
-}
-
-.general-sub {
-    font-family: "Exo", sans-serif;
-    font-weight: 300;
-    color: #fafafa;
-}
-
-.inline-block {
-    display: inline-block;
-}
 
 
-.row-table {
-    display: table;
-}
-
-.history-heading,
-.section-heading {
-    font-family: "Exo", sans-serif;
-    font-weight: 300;
-    margin-top: 25px;
-    margin-bottom: 40px;
-}
 
 
-/*--------------------------------------------Heading*/
+/*--------------------------------------------Heading + card heading*/
 
 header {
     margin: 0;
@@ -73,9 +37,8 @@ header {
 
 .heading {
     margin-left: 50px;
+    margin-bottom: 20px;
 }
-
-
 /*--------------------------------------------Hover.css*/
 
 .hvr-sweep-to-bottom:before {
@@ -132,7 +95,7 @@ footer .cv-pdf i:hover {
 .social-links li a i:hover {
     background: #f2d492;
 }
-.text-center {
+.clubs {
     text-align: center!important;
 }
 
@@ -147,12 +110,10 @@ footer .cv-pdf i:hover {
     display: flex;
     -ms-flex-direction: column;
     flex-direction: column;
-    min-width: 0;
+    min-width: -50;
     word-wrap: normal;
     background-color: #fff;
     background-clip: border-box;
-    border: 1px solid rgba(0,0,0,.125);
-    border-radius: .1rem;
 }
 
 

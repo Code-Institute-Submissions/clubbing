@@ -1,7 +1,7 @@
 var map;
 var coords = {
-    "lat": 53.3493,
-    "lng": -6.261
+    "lat":  59.334591,
+    "lng": 18.063240
 };
 
 function myFunction() {
@@ -32,7 +32,7 @@ function createMap() {
         animation: google.maps.Animation.DROP,
         map: map,
         label: {
-            text: "Dublin GPO",
+            text: "HILMA",
             color: "black",
             fontWeight: "bold",
             fontSize: "20px",
@@ -47,7 +47,7 @@ function googlePlacesAPI(){
         dataType: 'json',
         data: {
               'type': 'night_club',
-            'radius': 1500,
+            'radius': 2000,
             'location': '-33.8670522,151.1957362',
             'key': 'AIzaSyA727QkFrjWhzr_hxqcxtuRE3XR0lLMWDQ',
         },
@@ -91,6 +91,19 @@ $(document).ready(function () {
 //        }
 //    });
 
+var request = {
+        placeId: generalPlaceInfo.placeId,
+        fields: ['name', 'geometry', 'opening_hours']
+    };
+	service.getDetails(request, function (googlePlaceInfo, status) {
+		if (status == google.maps.places.PlacesServiceStatus.OK) {
+            let placeInfo = {
+                'google': googlePlaceInfo,
+                'general': generalPlaceInfo
+            }
+			createMarker(placeInfo);
+		}
+	});
 
     searchBox.addListener("places_changed", function () {
         let places = searchBox.getPlaces();
