@@ -238,3 +238,7 @@ input::placeholder {
 #myUL li a:hover:not(.header) {
   background-color: #eee;
 }
+
+.container:hover {
+  display: block;
+}
