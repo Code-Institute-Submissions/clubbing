@@ -53,19 +53,9 @@
                     </div>
                 </div>
             </div>
-            
-            <!--MODAL-->
-<section id="recommendations" class="container pb-5">
-<button id="myBtn">Open Modal</button>
 
-<!-- The Modal -->
-<div id="myModal" class="modal">
 
-  <!-- Modal content -->
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <p>Some text in the Modal..</p>
-  </div>
+
 
 </div>
 
@@ -74,12 +64,20 @@
 
 
 
-            
+           
             <!-- Page Features -->
            
             <div class="row text-center">
                 <div class="col-lg-3 col-md-6 mb-4">
                     <div class="card h-60 Hilma hvr-shrink">
+
+    
+
+<!-- The Modal -->
+<div>
+
+</div>
+
                         <img class="card-img-top" src="assets/images/hilma.jpg" alt="">
                         <div class="card-body">
                             <h4 class="card-title">Hilma</h4>
@@ -198,7 +196,50 @@ On the 26th floor you will find "Grill & Cocktail". In an urban, vibrant environ
                 </div>
             </div>
         </div>
+       
+
     
+    <section>
+                    <!-- Trigger/Open The Modal -->
+<div class="modal-content" data-toggle="modal-content" data-target="#modal-page">
+                </div>
+                <!-- Section: Modal -->
+<div class="modal-content" id="modal-page" style="display: block; padding-right: 14px;" aria-modal="true" role="dialog">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content container">
+                <div class="row">
+                    <div class="col-12">
+                        <button type="button" class="close ml-auto btn-close-modal" data-dismiss="modal" aria-label="Close" onclick="removeCards()">
+                        <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <h2 id="modal-auto-header" class="orange-modal-header">sydney</h2>
+                        <span id="modal-auto-country" class="modal-auto-country">Australia</span>
+                    </div>
+                </div>
+                <div id="quick-guide" class="row"> <div class="row mt-4 container">
+    <div class="col-12 col-lg-8 mb-4">
+        <img id="modal-image" src="https://images.unsplash.com/photo-1528800223624-764941bb49db?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1466&amp;q=80" alt="image of city center" class="img-fluid">
+    </div>
+    <div class="col-12 col-lg-4">
+        <h5 class="modal-guide">Quick Guide</h5>
+        <ul class="quick-list">
+            <li class="quick-item"><i class="quick-icon far fa-comments" aria-hidden="true"></i><span id="place-item">nightclub</span></li>
+            <li class="quick-item"><i class="quick-icon fas fa-hand-holding-usd" aria-hidden="true"></i><span id="currency-item">Australian Dollar</span></li>
+            <li class="quick-item"><i class="quick-icon fas fa-temperature-low" aria-hidden="true"></i><span id="temp-item"> 22</span></li>
+            <li class="quick-item"><i class="quick-icon fas fa-plane-departure" aria-hidden="true"></i><span id="airport-item">Sydney Airport (SYD)</span></li>
+            <li id="guide-item" class="quick-item">Sydney is a very livable city with magnificent nature and vibrant cultural life. It is home to the largest fish market in the world and is also considered to be the most densely populated city in the entire continent.</li>
+        </ul>
+    </div>
+    </div>
+    </div>
+   </section>
+                
+              
+
 
     <footer class="container text-center">
         <div id="footer-details" class="row">
