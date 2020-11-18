@@ -48,7 +48,7 @@ function googlePlacesAPI(){
         data: {
               'type': 'night_club',
             'radius': 2000,
-            'location': '-33.8670522,151.1957362',
+            'location': '59.334591,18.063240',
             'key': 'AIzaSyA727QkFrjWhzr_hxqcxtuRE3XR0lLMWDQ',
         },
     }
@@ -108,12 +108,12 @@ var request = {
     searchBox.addListener("places_changed", function () {
         let places = searchBox.getPlaces();
 
-        //        service --> places
-        //        request = {
-        //            'radius': 5000,
-        //            'type': 'night_club',
-        //        }
-        //        places = service.getPlaces(request)
+        places
+      request = {
+            'radius': 5000,
+           'type': 'night_club',
+        }
+      places = service.getPlaces(request)
 
         if (places.length == 0) {
             return;
@@ -127,6 +127,20 @@ var request = {
 
 
 
+//let modalBtn = document.getElementById("modal-btn")
+//let modal = document.querySelector(".modal")
+//let closeBtn = document.querySelector(".close-btn")
+//modalBtn.onclick = function(){
+//  modal.style.display = "block"
+//}
+//closeBtn.onclick = function(){
+//  modal.style.display = "none"
+//}
+//window.onclick = function(e){
+//  if(e.target == modal){
+//    modal.style.display = "none"
+//  }
+//}
 
 
 
