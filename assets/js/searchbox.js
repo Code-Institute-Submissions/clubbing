@@ -1,6 +1,6 @@
 var map;
 var coords = {
-    "lat":  59.334591,
+    "lat": 59.334591,
     "lng": 18.063240
 };
 
@@ -32,12 +32,29 @@ function createMap() {
         animation: google.maps.Animation.DROP,
         map: map,
         label: {
-            text: "HILMA",
+            text: "Spy Bar",
             color: "black",
             fontWeight: "bold",
             fontSize: "20px",
         }
     });
+    
+var request = {
+        placeId: generalPlaceInfo.placeId,
+        fields: ['name', 'geometry', 'opening_hours']
+    };
+    var service = new google.maps.places.PlacesService(map);
+
+	  service.findPlaceFromQuery(request, function(results, status) {
+		 if (status === google.maps.places.PlacesServiceStatus.OK) {
+             for (var i = 0; i < results.length; i++) {
+                createMarker(results[i]);
+             }
+             map.setCenter(results[0].geometry.location);
+                }
+                service = new google.maps.places.PlacesService(map);
+service.nearbySearch(request, callback);
+  });
 }
 
 function googlePlacesAPI(){
@@ -47,8 +64,8 @@ function googlePlacesAPI(){
         dataType: 'json',
         data: {
               'type': 'night_club',
-            'radius': 2000,
-            'location': '59.334591,18.063240',
+            'radius': 1500,
+            'location': '-33.8670522,151.1957362',
             'key': 'AIzaSyA727QkFrjWhzr_hxqcxtuRE3XR0lLMWDQ',
         },
     }
@@ -91,29 +108,19 @@ $(document).ready(function () {
 //        }
 //    });
 
-var request = {
-        placeId: generalPlaceInfo.placeId,
-        fields: ['name', 'geometry', 'opening_hours']
-    };
-	service.getDetails(request, function (googlePlaceInfo, status) {
-		if (status == google.maps.places.PlacesServiceStatus.OK) {
-            let placeInfo = {
-                'google': googlePlaceInfo,
-                'general': generalPlaceInfo
-            }
-			createMarker(placeInfo);
-		}
-	});
+
+
+
 
     searchBox.addListener("places_changed", function () {
         let places = searchBox.getPlaces();
 
-        places
-      request = {
-            'radius': 5000,
-           'type': 'night_club',
-        }
-      places = service.getPlaces(request)
+        //        service --> places
+        //        request = {
+        //            'radius': 5000,
+        //            'type': 'nigh_club',
+        //        }
+        //        places = service.getPlaces(request)
 
         if (places.length == 0) {
             return;
@@ -124,23 +131,3 @@ var request = {
         })
     });
 });
-
-
-
-//let modalBtn = document.getElementById("modal-btn")
-//let modal = document.querySelector(".modal")
-//let closeBtn = document.querySelector(".close-btn")
-//modalBtn.onclick = function(){
-//  modal.style.display = "block"
-//}
-//closeBtn.onclick = function(){
-//  modal.style.display = "none"
-//}
-//window.onclick = function(e){
-//  if(e.target == modal){
-//    modal.style.display = "none"
-//  }
-//}
-
-
-
