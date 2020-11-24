@@ -1,31 +1,20 @@
 var map;
 var coords = {
     "lat": 59.334591,
-    "lng": 18.063240
+    "lng": 18.063240,
+    "lat": 59.3365,
+    "lng": 18.0721,
+    "lat": 59.3184,
+    "lng": 18.0744
 };
 
-function myFunction() {
-    var input, filter, ul, li, a, i, txtValue;
-    input = document.getElementById("myInput");
-    filter = input.value.toUpperCase();
-    ul = document.getElementById("myUL");
-    li = ul.getElementsByTagName("li");
-    for (i = 0; i < li.length; i++) {
-        a = li[i].getElementsByTagName("a")[0];
-        txtValue = a.textContent || a.innerText;
-        if (txtValue.toUpperCase().indexOf(filter) > -1) {
-            li[i].style.display = "";
-        } else {
-            li[i].style.display = "none";
-        }
-    }
-}
+
 
 function createMap() {
     map = new google.maps.Map(document.getElementById("map"), {
         center: coords,
         zoom: 18,
-        disableDefaultUI: true
+        
     });
     marker = new google.maps.Marker({
         position: coords,
@@ -63,10 +52,9 @@ function googlePlacesAPI(){
         type: 'GET',
         dataType: 'json',
         data: {
-              'type': 'night_club',
+              'type': 'night_clubs',
             'radius': 1500,
-            'location': '-33.8670522,151.1957362',
-            'key': 'AIzaSyA727QkFrjWhzr_hxqcxtuRE3XR0lLMWDQ',
+            'location': '59.334591,18.063240',
         },
     }
 
@@ -79,38 +67,9 @@ function googlePlacesAPI(){
 $(document).ready(function () {
     var input = document.getElementById("autocomplete");
     var searchBox = new google.maps.places.SearchBox(input);
+    var autocomplete = new
 
     createMap();
-
-    //    map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
-    //    map.addListener("bounds_changed", function () {
-    //        searchBox.setBounds(map.getBounds());
-    //    });
-    
-//    const request = {
-//        query: "",
-//        radius: 5000,
-//        location: new google.maps.LatLng(-34.397, 150.644),
-//        type: 'night_club',
-//    };
-//    service = new google.maps.places.PlacesService(map);
-//    service.search(request, (results, status) => {
-//        console.log(results);
-//    });
-//
-//
-//    service.findPlaceFromQuery(request, (results, status) => {
-//        if (status === google.maps.places.PlacesServiceStatus.OK) {
-//            for (let i = 0; i < results.length; i++) {
-//                createMarker(results[i]);
-//            }
-//            map.setCenter(results[0].geometry.location);
-//        }
-//    });
-
-
-
-
 
     searchBox.addListener("places_changed", function () {
         let places = searchBox.getPlaces();
@@ -130,4 +89,22 @@ $(document).ready(function () {
             console.log(result);
         })
     });
+    
 });
+function myFunction() {
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myUL");
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+};
+
