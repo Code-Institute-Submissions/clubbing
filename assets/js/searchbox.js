@@ -1,122 +1,47 @@
-var map;
-var Sodra = {
-     lat: 59.3184, lng:18.0744,               
-};
-var Hilma = {
-    lat: 59.334591,lng: 18.063240
-}
+ function initMap() {
+        const map = new google.maps.Map(document.getElementById("map"), {
+          center: { lat: -33.8688, lng: 151.2195 },
+          zoom: 13,
+        });
+        const input = document.getElementById("pac-input");
+        const autocomplete = new google.maps.places.Autocomplete(input);
+        autocomplete.bindTo("bounds", map);
+        // Specify just the place data fields that you need.
+        autocomplete.setFields(["place_id", "geometry", "name"]);
+        map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
+        const infowindow = new google.maps.InfoWindow();
+        const infowindowContent = document.getElementById("infowindow-content");
+        infowindow.setContent(infowindowContent);
+        const marker = new google.maps.Marker({ map: map });
+        marker.addListener("click", () => {
+          infowindow.open(map, marker);
+        });
+        autocomplete.addListener("place_changed", () => {
+          infowindow.close();
+          const place = autocomplete.getPlace();
 
-
-function createMap() {
-    map = new google.maps.Map(document.getElementById("map"), {
-        center: Sodra,
-        zoom: 18,
-        
-    });
-    marker = new google.maps.Marker({
-        position: Sodra,
-        animation: google.maps.Animation.DROP,
-        map: map,
-        label: {
-            text: "Sodra Teatern",
-            color: "black",
-            fontWeight: "bold",
-            fontSize: "20px",
-        }
-        
-    });
-
-    //marker clusters//
-   
-
-//call places//
-var request = {
-        placeId: generalPlaceInfo.placeId,
-        fields: ['name', 'geometry', 'opening_hours']
-    };
-    var service = new google.maps.places.PlacesService(map);
-
-	  service.findPlaceFromQuery(request, function(results, status) {
-		 if (status === google.maps.places.PlacesServiceStatus.OK) {
-             for (var i = 0; i < results.length; i++) {
-                createMarker(results[i]);
-             }
-             map.setCenter(results[0].geometry.location);
-                }
-                service = new google.maps.places.PlacesService(map);
-service.nearbySearch(request, callback);
-  });
-}
-
-function googlePlacesAPI(){
-    settings = {
-        url: `https://maps.googleapis.com/maps/api/place/nearbysearch/json`,
-        type: 'GET',
-        dataType: 'json',
-        data: {
-              'type': 'night_clubs',
-            'radius': 1000,
-            'location': '59.334591,18.063240',
-        },
-    }
-// req = $.ajax(settings);
-  //  req.done(function(data) {
-    //    console.info(data);
-   // });
-}
-
-$(document).ready(function () {
-    var input = document.getElementById("autocomplete");
-    var searchBox = new google.maps.places.SearchBox(input);
-    var autocomplete = new
-
-    createMap();
-
-    searchBox.addListener("places_changed", function () {
-        let places = searchBox.getPlaces();
-
-                service --> places
-                request = {
-                    'radius': 5000,
-                    'type': 'restaurant',
-                }
-                places = service.getPlaces(request)
-
-        if (places.length == 0) {
+          if (!place.geometry) {
             return;
-        }
+          }
 
-//        places.forEach(function (result) {
-//            console.log(result);
-//        })
-    });
-    
-});
-//function myFunction() {
-//    var input, filter, ul, li, a, i, txtValue;
-//    input = document.getElementById("myInput");
-//    filter = input.value.toUpperCase();
-//    ul = document.getElementById("myUL");
-//    li = ul.getElementsByTagName("li");
-//    for (i = 0; i < li.length; i++) {
-//        a = li[i].getElementsByTagName("a")[0];
-//        txtValue = a.textContent || a.innerText;
-//        if (txtValue.toUpperCase().indexOf(filter) > -1) {
-//            li[i].style.display = "";
-//        } else {
-//            li[i].style.display = "none";
-//        }
-//    }
-//};
-
-$(document).ready(function () {
-
-        var labels = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-        var locations = [
-            {lat: 59.334591,lng: 18.063240},
-            {lat: 59.3365, lng:18.0721},
-            {lat: 59.3184, lng:18.0744},
-            {lat: 59.2917, lng:18.0793}
-        ];
-         });
-       
+          if (place.geometry.viewport) {
+            map.fitBounds(place.geometry.viewport);
+          } else {
+            map.setCenter(place.geometry.location);
+            map.setZoom(17);
+          }
+          // Set the position of the marker using the place ID and location.
+          marker.setPlace({
+            placeId: place.place_id,
+            location: place.geometry.location,
+          });
+          marker.setVisible(true);
+          infowindowContent.children.namedItem("place-name").textContent =
+            place.name;
+          infowindowContent.children.namedItem("place-id").textContent =
+            place.place_id;
+          infowindowContent.children.namedItem("place-address").textContent =
+            place.formatted_address;
+          infowindow.open(map, marker);
+        });
+      }

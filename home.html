@@ -9,7 +9,15 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css" type="text/css" />
     <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
-    <title>Bars in Stockholm</title>
+    <title>Nightlife in Stockholm</title>
+
+ <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA727QkFrjWhzr_hxqcxtuRE3XR0lLMWDQ&callback=initMap&libraries=places&v=weekly"
+      defer
+    ></script>
+    <link rel="stylesheet" type="text/css" href="./style.css"/>
+    
 
 </head>
 
@@ -17,33 +25,35 @@
     <header>
         <h1 class="text-center py-4" id="main-h1">Club guide Stockholm</h1>
     </header>
+ <div style="display: none">
+      <input
+        id="pac-input"
+        class="controls"
+        type="text"
+        placeholder="Enter a location"
+      />
+    </div>
+    <div id="map"></div>
+    <div id="infowindow-content">
+      <span id="place-name" class="title"></span><br />
+      <strong>Place ID:</strong> <span id="place-id"></span><br />
+      <span id="place-address"></span>
+    </div>
 
 
     <section class="container-fluid">
-        <div class="row">
             <div class="col-12 col-sm-8 mb-3 mx-auto">
-               
-<!--
-                    <ul id="myUL">
-                        <li><a href="#">Hilma</a></li>
-                        <li><a href="#">Spy Bar</a></li>
-                        <li><a href="#">Sodra Teatern</a></li>
-                        <li><a href="#">Slakthuset</a></li>
-                    </ul>
--->
-                </form>
             </div>
-        </div>
     </section>
     
-    <!--Map-->
+    
     <section id="map-section">
         <div class="container-fluid px-0" id="map-div">
             <div id="map" style="height: 100%;"></div>
         </div>
 
     </section>
-<!--Clubs cards-->
+
     <section id="clubs-header">
         <div class="container bg-color-contact">
             <div class="row">
@@ -51,7 +61,7 @@
                     <h2 class="text-center py-5">A local guide to Stockholm's best r&b and hip hop clubs</h2>
                     <div class="clubs">
                         <div class="club listing">
-                            <div class="listing venue">
+                            <div class="listing venue" src="https://fastly.4sqi.net/img/general/1398x536/66U5SJQ30DSL0Z95CvUsA9_9m-C1DKBTz6-7ojheVOY.jpg">
                             </div>
                         </div>
                     </div>
@@ -62,8 +72,8 @@
 </section>
 
            
-<!--Cards of clubs/page features-->
-           <section>
+<!-- Page Features -->
+           
             <div class="row text-center">
                 <div class="col-lg-3 col-md-6 mb-4">
                     <div class="card h-60 Hilma hvr-shrink">
@@ -79,6 +89,7 @@
                             <a href="https://www.hilmastockholm.com/" class="btn btn-primary">Find Out More!</a>
                         </div>
                     </div>
+<!---Cards of clubs-->
                 </div>
                 <div class="col-lg-3 col-md-6 mb-4">
                     <div class="card h-60 Spy Bar hvr-shrink">
@@ -184,9 +195,7 @@ On the 26th floor you will find "Grill & Cocktail". In an urban, vibrant environ
 
                 </div>
             </div>
-        </div>
-   </section>
-
+</body>
               
               
 
@@ -229,4 +238,4 @@ On the 26th floor you will find "Grill & Cocktail". In an urban, vibrant environ
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA727QkFrjWhzr_hxqcxtuRE3XR0lLMWDQ&libraries=places,maps"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="assets/js/searchbox.js"></script>
-</body></html>
+</html>
