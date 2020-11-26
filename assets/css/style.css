@@ -35,15 +35,7 @@ body {
     text-transform: uppercase;
 }
 
-.general-sub {
-    font-family: "Exo", sans-serif;
-    font-weight: 300;
-    color: #fafafa;
-}
 
-.inline-block {
-    display: inline-block;
-}
 
 
 .row-table {
