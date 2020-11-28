@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,600,700|Exo:100,200,300,400,500,600,700');
-
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Lato&family=Oswald&display=swap" rel="stylesheet">
 .club description{
     font-size: 350px;
     font-style: italic;
@@ -21,7 +22,7 @@
 
 
 body {
-    font-family: Roboto, sans-serif;
+    font-family: 'Inconsolata', monospace;
     font-weight: 300;
     background-color: #283845;
     color: #555555;

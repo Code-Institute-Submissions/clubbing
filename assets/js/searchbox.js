@@ -7,7 +7,7 @@
         const autocomplete = new google.maps.places.Autocomplete(input);
         autocomplete.bindTo("bounds", map);
         // Specify just the place data fields that you need.
-        autocomplete.setFields(["place_id", "geometry", "name"]);
+        autocomplete.setFields(["place_id", "geometry", "name", "opening_hours/weekday_text", "formatted_address"]);
         map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
         const infowindow = new google.maps.InfoWindow();
         const infowindowContent = document.getElementById("infowindow-content");
@@ -45,3 +45,16 @@
           infowindow.open(map, marker);
         });
       }
+      function createPhotoMarker(place) {
+  var photos = place.photos;
+  if (!photos) {
+    return;
+  }
+
+  var marker = new google.maps.Marker({
+    map: map,
+    position: place.geometry.location,
+    title: place.name,
+    icon: photos[0].getUrl({maxWidth: 35, maxHeight: 35})
+  });
+}
