@@ -100,6 +100,7 @@ border-radius: .1rem;
 
 .card-img-top{
     height: 300px;
+    width: 50px;
 }
 /*--------------------------------------------Media Queries*/
 @media(min-width: 992px) {
