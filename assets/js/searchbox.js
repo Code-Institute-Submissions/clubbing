@@ -21,7 +21,7 @@ function initMap() {
     autocomplete.bindTo("bounds", map);
 
     // Specify just the place data fields that you need.
-    autocomplete.setFields(["place_id", "geometry", "name", "opening_hours/weekday_text", "formatted_address"]);
+    autocomplete.setFields(["place_id", "geometry", "name", "formatted_address"]);
 
     map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
     infowindow = new google.maps.InfoWindow();
@@ -187,8 +187,7 @@ function autocompleteCallback() {
     mapPlaceMarker.setVisible(true);
     infowindowContent.children.namedItem("place-name").textContent =
         place.name;
-    infowindowContent.children.namedItem("place-id").textContent =
-        place.place_id;
+
     infowindowContent.children.namedItem("place-address").textContent =
         place.formatted_address;
     infowindow.open(map, mapPlaceMarker);
@@ -232,3 +231,25 @@ for (i = 0; i < acc.length; i++) {
     }
   });
 }
+
+//$( document ).ready(function() {
+//  $('.col-4').html('Some quick example text to build on the card title and make up the bulk of the card').fadeOut(500);
+//});
+//var contents = $('.col-4').html();
+//$('.col-4').html("insert content into element");
+
+$(document).ready(function(){
+    $("button").click(function(){
+        $(".card-footer hilma").html("<h1>Hello, Hilma!</h1>");
+        $(".card-footer spy bar").html("<h1>Hello, Spy Bar!</h1>");
+        $(".card-footer sodra").html("<h1>Hello, Sodra Teatern!</h1>");
+        $(".card-footer slakthuset").html("<h1>Hello, Slakthuset!</h1>");
+        $(".card-footer fasching").html("<h1>Hello, Fasching!</h1>");
+        $(".card-footer tradgarden").html("<h1>Hello, Trädgården !</h1>");
+        $(".card-footer hobo").html("<h1>Hello, Hobo!</h1>");
+        $("#card-footer himlen").html("<h1>Hello, Himlen</h1>");
+    });
+});
+
+ 
+      
