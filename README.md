@@ -87,7 +87,7 @@ Content:
 
 	The wireframes were created with  Adobe XD
 
-	The footer was 
+
 	
 #MEDIA: 
 	All images were taken from my personal photo collection
