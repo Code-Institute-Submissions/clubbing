@@ -238,18 +238,52 @@ for (i = 0; i < acc.length; i++) {
 //var contents = $('.col-4').html();
 //$('.col-4').html("insert content into element");
 
+
+
 $(document).ready(function(){
     $("button").click(function(){
-        $(".card-footer hilma").html("<h1>Hello, Hilma!</h1>");
-        $(".card-footer spy bar").html("<h1>Hello, Spy Bar!</h1>");
-        $(".card-footer sodra").html("<h1>Hello, Sodra Teatern!</h1>");
-        $(".card-footer slakthuset").html("<h1>Hello, Slakthuset!</h1>");
-        $(".card-footer fasching").html("<h1>Hello, Fasching!</h1>");
-        $(".card-footer tradgarden").html("<h1>Hello, Trädgården !</h1>");
-        $(".card-footer hobo").html("<h1>Hello, Hobo!</h1>");
-        $("#card-footer himlen").html("<h1>Hello, Himlen</h1>");
+        $("#Hilma").html("<h1>Hello, Hilma!</h1>");
     });
 });
 
- 
-      
+$(document).ready(function(){
+    $("button").click(function(){
+        $("#SpyBar").html("<h1>Dj Ivan spin 21-3</h1>");
+    });
+});
+
+$(document).ready(function(){
+    $("button").click(function(){
+        $("#Sodra").html("<h1>Hello, Spy Bar!</h1>");
+    });
+});
+
+$(document).ready(function(){
+    $("button").click(function(){
+        $("#Slak").html("<h1>Hello, Spy Bar!</h1>");
+    });
+});
+
+$(document).ready(function(){
+    $("button").click(function(){
+        $("#Fash").html("<h1>Hello, Spy Bar!</h1>");
+    });
+});
+
+$(document).ready(function(){
+    $("button").click(function(){
+        $("#Trad").html("<h1>Hello, Spy Bar!</h1>");
+    });
+});
+
+$(document).ready(function(){
+    $("button").click(function(){
+        $("#Hobo").html("<h1>Hello, Spy Bar!</h1>");
+    });
+});
+
+$(document).ready(function(){
+    $("button").click(function(){
+        $("#Himlen").html("<h1>Hello, Spy Bar!</h1>");
+    });
+});
