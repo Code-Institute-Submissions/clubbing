@@ -242,48 +242,48 @@ for (i = 0; i < acc.length; i++) {
 
 $(document).ready(function(){
     $("button").click(function(){
-        $("#Hilma").html("<h1>Hello, Hilma!</h1>");
+        $("#Hilma").html("<h1>Salsa for Beginners 1800 - 1930</h1>");
     });
 });
 
 $(document).ready(function(){
     $("button").click(function(){
-        $("#SpyBar").html("<h1>Dj Ivan spin 21-3</h1>");
+        $("#SpyBar").html("<h1>Dj Ivan classics 21-3</h1>");
     });
 });
 
 $(document).ready(function(){
     $("button").click(function(){
-        $("#Sodra").html("<h1>Hello, Spy Bar!</h1>");
+        $("#Sodra").html("<h1>Hip Hop & R&B with dj Messi from 2200 - 500</h1>");
     });
 });
 
 $(document).ready(function(){
     $("button").click(function(){
-        $("#Slak").html("<h1>Hello, Spy Bar!</h1>");
+        $("#Slak").html("<h1>Jazz night with special guest perfomances 1900 - 2300</h1>");
     });
 });
 
 $(document).ready(function(){
     $("button").click(function(){
-        $("#Fash").html("<h1>Hello, Spy Bar!</h1>");
+        $("#Fash").html("<h1>Flash mob part with Kaz & Jeff 2100 - 0000</h1>");
     });
 });
 
 $(document).ready(function(){
     $("button").click(function(){
-        $("#Trad").html("<h1>Hello, Spy Bar!</h1>");
+        $("#Trad").html("<h1>Field Play events 1700 - 2100</h1>");
     });
 });
 
 $(document).ready(function(){
     $("button").click(function(){
-        $("#Hobo").html("<h1>Hello, Spy Bar!</h1>");
+        $("#Hobo").html("<h1> Hotel Selections presents... 2100 - 300</h1>");
     });
 });
 
 $(document).ready(function(){
     $("button").click(function(){
-        $("#Himlen").html("<h1>Hello, Spy Bar!</h1>");
+        $("#Himlen").html("<h1>After Work 1800 - 0000</h1>");
     });
 });
