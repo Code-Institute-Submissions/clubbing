@@ -136,13 +136,7 @@ function initMap() {
     var placesList = document.getElementById('places');
     for (var i = 0, place; place = places[i]; i++) 
     {
-      var image = {
-        url: place.icon,
-        size: new google.maps.Size(71, 71),
-        origin: new google.maps.Point(0, 0),
-        anchor: new google.maps.Point(17, 34),
-        scaledSize: new google.maps.Size(25, 25)
-      };
+     
       var marker = new google.maps.Marker({
         map: map,
         icon: image,
@@ -164,7 +158,6 @@ marker.setMap(map);
     map.fitBounds(bounds);
 }
 
-
 function autocompleteCallback() {
     infowindow.close();
     const place = autocomplete.getPlace();
@@ -179,7 +172,7 @@ function autocompleteCallback() {
         map.setCenter(place.geometry.location);
         map.setZoom(17);
     }
-    // Set the position of the marker using the place ID and location.
+    // Position of marker using place ID and location
     mapPlaceMarker.setPlace({
         placeId: place.place_id,
         location: place.geometry.location,
@@ -192,7 +185,7 @@ function autocompleteCallback() {
         place.formatted_address;
     infowindow.open(map, mapPlaceMarker);
 
-    // Call the places API to search the vicinity for clubs
+    // Call places API to search close area for other bars & clubs
     searchPlace(place.geometry.location);
 }
 
@@ -218,11 +211,11 @@ var i;
 
 for (i = 0; i < acc.length; i++) {
   acc[i].addEventListener("click", function() {
-    /* Toggle between adding and removing the "active" class,
+    /* Adding and removing "active" class,
     to highlight the button that controls the panel */
     this.classList.toggle("active");
 
-    /* Toggle between hiding and showing the active panel */
+    /* Hiding and showing the active panel */
     var panel = this.nextElementSibling;
     if (panel.style.display === "block") {
       panel.style.display = "none";
@@ -232,14 +225,7 @@ for (i = 0; i < acc.length; i++) {
   });
 }
 
-//$( document ).ready(function() {
-//  $('.col-4').html('Some quick example text to build on the card title and make up the bulk of the card').fadeOut(500);
-//});
-//var contents = $('.col-4').html();
-//$('.col-4').html("insert content into element");
-
-
-
+/* Initializing promise of response */
 $(document).ready(function(){
     $("button").click(function(){
         $("#Hilma").html("<h1>Salsa for Beginners 1800 - 1930</h1>");
@@ -287,3 +273,6 @@ $(document).ready(function(){
         $("#Himlen").html("<h1>After Work 1800 - 0000</h1>");
     });
 });
+
+
+ 
