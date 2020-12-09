@@ -1,0 +1,188 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>readme.md</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__html"><p><strong>PAGE</strong></p>
+<p>This website was designed for a users who are looking for a club/Bar to go to in Stockholm. The site allows accessibility to the locations of those clubs around stockholm and other clubs and bars. It allows a user to compare locations and basic information of the bars and night clubs all in one page rather than opening several pages.</p>
+<p><strong>UX</strong></p>
+<p>I designed this project as a one page based site. This would allow for easy navigation due to its simplicity and being mobile friendly considering users of the site would most likely be people on the move looking for the next club to go to quickly. As such, it was imperative that I created a site that was also mobile-friendly and simple, as a priority.</p>
+<p><strong>Target Audience:</strong></p>
+<ul>
+<li>
+<p>The website is aimed at but not limited to:</p>
+</li>
+<li>
+<p>clubbers</p>
+</li>
+<li>
+<p>tourists</p>
+</li>
+<li>
+<p>young professionals</p>
+</li>
+</ul>
+<p><strong>FEATURES:</strong></p>
+<ol>
+<li>
+<p>Map: The map allows users to be able to make comparisons in relation<br>
+to distances and locations between clubs and identify general<br>
+information about each one.</p>
+</li>
+<li>
+<p>Buttons: made by replacing HTML with Jquery to produce a button that<br>
+provides extra information on each featured clubs.</p>
+</li>
+<li>
+<p>Cards made with bootstrap to highlight 8 featured clubs.</p>
+</li>
+<li>
+<p>Search box on map: Google Places and Google Places ID provides<br>
+in-map searching with full basic information and address each club<br>
+searched within a restricted radius(set out in the javascript)</p>
+</li>
+<li>
+<p>HTML: Provided the content and structure for the website.</p>
+</li>
+<li>
+<p>Javascript: used to create establish API usage for a Google Map,<br>
+Google places with markers. And create an accordion as a page<br>
+feature to show the recommended night clubs</p>
+</li>
+<li>
+<p>Jquery: used to produce the interactive buttons for each card</p>
+</li>
+<li>
+<p>Bootstrap: The framework was used to create the layout for the page.<br>
+Used to create the accordion collapsing interaction for the<br>
+highlighted clubs.</p>
+</li>
+<li>
+<p>CSS: Provides the styling.</p>
+</li>
+<li>
+<p>Coolors: used to create the page colour scheme.</p>
+</li>
+</ol>
+<p><strong>PAGE PURPOSE:</strong></p>
+<ul>
+<li>
+<p>to check the location of a night club and the surrounding bars and the basic information of the night clubs.</p>
+</li>
+<li>
+<p>to present the locations shown on a map of these clubs</p>
+</li>
+<li>
+<p>to provide highlights of the most common bars</p>
+</li>
+<li>
+<p>tour guide for nightclub-goers</p>
+</li>
+</ul>
+<p><strong>TESTING:</strong></p>
+<p>Testing was carried out using the developer tools in Google Chrome and also while in preview from Gitpod. I used Google chrome developer mode to check responsiveness and the extent to which users could view the page via mobile. Back-and-forth alterations of code occurred in order to achieve appropriate responsiveness of the the google APis’ used as well as the accordion bootstrap feature. I used lighthouse to debug and retest features and remove errors and bugs and increase performance.</p>
+<p>Google maps does not seem to allow me to add the information box details for other nearby locations I had identified within the radius set. As such, they remain unable to provide that extra information. However, the user can click around it and find the same bar club or restaurant and click on that marker to provide that information.</p>
+<p><strong>USER TEST STORY:</strong></p>
+<ul>
+<li>
+<p>See Lighthouse Reports <a href="https://github.com/aoshenye/clubbing/blob/master/desktop_lighthouse%20report.JPG">Desktop</a> &amp; <a href="https://github.com/aoshenye/clubbing/blob/master/mobile_lighthouse%20report.JPG">Mobile</a></p>
+</li>
+<li>
+<p>Maps displayed correctly- map does not render when first opening the site.- issue fixed - map now renders at the opening of site. Ensured API keys were restricted appropriately for map to render.</p>
+</li>
+<li>
+<p>Added font face on font load times to improve performance. all features remain functioning. Font loads faster.</p>
+</li>
+<li>
+<p>removed unused CSS and Javascript to improve performance: all features remain functioning.</p>
+</li>
+<li>
+<p>adding media query for map api in css in order to maintain functionality of map and display accordingly on tablet and mobiles.</p>
+</li>
+<li>
+<p>All tests performed and no errors found.</p>
+</li>
+<li>
+<p>The modal was difficult to enable and align with the HTML as I was not able to have it function appropriately. Identifying what code was needed for the javascript to enable to modal i struggled with. The html for the modal was easy to set up so the problems came from the javascript. identification of code that would align with the modal was difficult to identify and enable and thus i removed that function and replaced it.</p>
+</li>
+<li>
+<p>In terms of the map itself. I wanted to combine the Maps API and the Places for the map to produce more interactive functioning and results for the places searched for. For example, enabling the map to produce basic information box with complete details of each Club as well as a picture of it. Google did not provide the code for that to occur and thus went for that information to be displayed below the map using HTML and Jquery, which allows more information than the address and opening hours. The interactive nature of the page would be highlighted by the JQuery instead to replace the HTML and hide that extra information until it is clicked on - The button.</p>
+</li>
+<li>
+<p>The website was tested on the following browsers using a Microsoft Surface Laptop on Windows 10.</p>
+</li>
+<li>
+<p>Google Chrome - Version 86.0.4240.183 (Official Build) (64-bit)</p>
+</li>
+<li>
+<p>Microsoft Edge - Version 86.0.622.63 (Official build) (64-bit)</p>
+</li>
+<li>
+<p>Firefox - 75.0 (64 bit)</p>
+</li>
+<li>
+<p>The website worked efficiently on all browsers and mobile phones above. All navigation links, required elements, APIs’ all functioned correctly. The hovering animations still worked on all browsers.</p>
+</li>
+<li>
+<p>The site was also tested on the following Devices:</p>
+</li>
+<li>
+<p>Google pixel 3a using Google Chrome on Android 10 iphone xr using Safari on IOS 13.4.1</p>
+</li>
+</ul>
+<p><strong>DEPLOYMENT</strong></p>
+<p>The webpage is hosted on GitHub Pages, to access the site, following next steps.</p>
+<ol>
+<li>Log into GitHub Pages from your repository</li>
+<li>Select <a href="aoshenye%20/%20clubbing">Clubbing</a></li>
+<li>Select Setting at the top right hand of the page.</li>
+<li>Scroll down to GitHub Pages section</li>
+<li>Under source click drop-down menu labelled None and select Master Branch</li>
+<li>The page will automatically refresh and now the webpage has been deployed.</li>
+</ol>
+<p><em><strong>To clone this project in Gitpod, you will need:</strong></em></p>
+<ol>
+<li>A Github account</li>
+<li>Use the Chrome browser</li>
+</ol>
+<pre><code>
+Then follow these steps:
+
+1. Install the Gitpod Browser Extensions for Chrome
+
+2. After Installation, restart the browser
+
+ 3. Log into Gitpod with your git pod account
+
+ 4. Navigate to the Project GitHub repository
+
+5. Click the green "Gitpod" button in the top right corner of the repository
+
+6. This will then trigger a new gitpod workspace created from the code in github to work locally. 
+
+</code></pre>
+<p><strong>CREDITS:</strong></p>
+<p>Content:</p>
+<p>The button was created with <a href="https://getbootstrap.com/docs/4.4/components/buttons/">[Bootstrap 4.4:]</a></p>
+<p>[Google MAPS API] - to render map (<a href="https://developers.google.com/">https://developers.google.com/</a>])</p>
+<p>The background theme colours used on the page were chosen from Coolors:  <a href="https://coolors.co/555b6e-89b0ae-bee3db-faf9f9-ffd6ba">https://coolors.co/555b6e-89b0ae-bee3db-faf9f9-ffd6ba</a>.</p>
+<p>The font style was take from Font Awesome:  <a href="https://fonts.google.com/?query=lat&amp;selection.family=Lato%7COswald">https://fonts.google.com/?query=lat&amp;selection.family=Lato|Oswald</a></p>
+<p>The hover was taken from:  <a href="https://ianlunn.github.io/Hover/">https://ianlunn.github.io/Hover/</a></p>
+<p>The script was taken from:  <a href="https://cdnjs.com/">https://cdnjs.com/</a></p>
+<p>The Bootstrap was taken from:  <a href="https://stackpath.bootstrapcdn.com/">https://stackpath.bootstrapcdn.com/</a></p>
+<p><a href="https://github.com/aoshenye/clubbing/blob/master/wireframe_clubbing_.pdf">The wireframes were created with Adobe XD -</a></p>
+<p>#MEDIA:</p>
+<p>All images were taken from my personal photo collection</p>
+<p>#ACKNOWLEDGMENTS:</p>
+<p>To my mentor Reuben Ferrante for patiently helping me through the process and providing advice and guidance.</p>
+<p>The inspiration for the site was taken from  <a href="https://startbootstrap.com/previews/stylish-portfolio">https://startbootstrap.com/previews/stylish-portfolio</a>  and  <a href="https://www.booking.com/index.en-gb.html?label=gen173nr-1BCAEoggI46AdIM1gEaFCIAQGYAQm4ARfIAQzYAQHoAQGIAgGoAgO4Aoaom_4FwAIB0gIkZWE1OTQyZWQtOWY2NC00NzlhLTgwZjItZDM4OTU5ZDZiZTY42AIF4AIB;sid=568806c28f3b3025dbc2ad6e52c02e37;keep_landing=1&amp;sb_price_type=total&amp;">https://www.booking.com/index.en-gb.html?label=gen173nr-1BCAEoggI46AdIM1gEaFCIAQGYAQm4ARfIAQzYAQHoAQGIAgGoAgO4Aoaom_4FwAIB0gIkZWE1OTQyZWQtOWY2NC00NzlhLTgwZjItZDM4OTU5ZDZiZTY42AIF4AIB;sid=568806c28f3b3025dbc2ad6e52c02e37;keep_landing=1&amp;sb_price_type=total&amp;</a></p>
+</div>
+</body>
+
+</html>
