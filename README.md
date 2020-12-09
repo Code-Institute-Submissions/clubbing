@@ -56,9 +56,28 @@ to provide highlights of the most common bars
 tour guide for nightclub-goers
 
 #USER TEST STORY:
+
+See Lighthouse Reports 
+
+
+
+
 Maps displayed correctly- map does not render when first opening the site.- issue fixed - map now renders at the opening of site. Ensured API keys were restricted appropriately for map to render.
 
+
+
+
+
+Added font face on font load times to improve performance. all features remain functioning. Font loads faster. 
+
+removed unused CSS and Javascript to improve performance: all features remain functioning. 
+
+adding media query for map api in css in order to maintain functionality of map and display accordingly on tablet and mobiles.
+
 All tests performed and no errors found.
+
+
+
 
 The modal was difficult to enable and align with the HTML as I was not able to have it function approritley. Identifying what code was needed for the javascript to enable to modal i struggled with. The html for the modal was easy to set up so the probelms came from the javascript. identification of code that would align with the modal was difficult to identify and enable and thus i removed that function and replaced it. 
 
@@ -83,6 +102,30 @@ Google pixel 3a using Google Chrome on Android 10 iphone xr using Safari on IOS 
 The webpage is hosted on GitHub Pages, to access the site, following next steps.
 
 Navigate to my Github repository -
+
+
+How to run this project locally:
+  
+  To clone this project in Gitpod, you will need:
+  
+    1. A Github account 
+    2. Use the Chrome browser
+    
+  Then follow these steps:
+  
+    1. Install the Gitpod Browser Extensions for Chrome
+    2. After Installation, restart the browser
+    3. Log into Gitpod with your git pod account
+    4. Navigate to the Project GitHub repository
+    5. Click the green "Gitpod" button in the top right corner of the repository
+    6. This will then trigger a new gitpod workspace created from the code in github to work locally. 
+    
+   
+
+
+
+
+
 
 #CREDITS:
 
